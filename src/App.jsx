@@ -48,7 +48,7 @@ function Paytable({ open, onClose }) {
           </div>
           <button className="icon-button" type="button" onClick={onClose} aria-label="Close paytable">×</button>
         </div>
-        <p className="drawer-copy">Wins pay from the leftmost reel across 20 fixed trails. WILD substitutes for every paying symbol. Three or more TNT symbols anywhere award free spins.</p>
+        <p className="drawer-copy">Wins pay from the leftmost reel across 20 fixed lines. WILD substitutes for every paying symbol. Three or more TNT symbols anywhere award free spins.</p>
         <div className="paytable-grid">
           {Object.entries(PAYTABLE).map(([key, payouts]) => (
             <div className="pay-row" key={key}>
@@ -66,7 +66,7 @@ function Paytable({ open, onClose }) {
         </div>
         <div className="line-guide">
           <span>5×3</span><span>20</span><span>W</span><span>TNT</span><span>MEGA</span>
-          <p>Five reels · 20 trails · Wilds · Free spins · Progressive jackpot</p>
+          <p>Five reels · 20 lines · Wilds · Free spins · Progressive jackpot</p>
         </div>
       </aside>
     </div>
@@ -234,7 +234,7 @@ export default function App() {
 
         <section className={`result-card ${lastWin > 0 ? 'has-win' : ''}`} aria-live="polite">
           <span>{message}</span>
-          <strong>{lastWin > 0 ? `+${formatCredits(lastWin)} CR` : freeSpins > 0 ? `${freeSpins} FREE SPINS` : '20 TRAILS ACTIVE'}</strong>
+          <strong>{lastWin > 0 ? `+${formatCredits(lastWin)} CR` : freeSpins > 0 ? `${freeSpins} FREE SPINS` : '20 LINES ACTIVE'}</strong>
           {latestSymbols.length > 0 && (
             <div className="last-symbols" aria-label="Last center row">
               {latestSymbols.map((symbol, index) => <i key={`${symbol}-${index}`} style={{ color: SYMBOLS[symbol].color }}>{SYMBOLS[symbol].label}</i>)}
@@ -273,7 +273,7 @@ export default function App() {
       <footer>
         <span><i className="status-dot" /> CRYPTO DEMO RNG / 20 LINES</span>
         <p>Entertainment demo only / No deposits / No real-money wagering</p>
-        <span>5 REELS / 3 VISIBLE ROWS / STATIC 2D</span>
+        <span>5 REELS / 3 ROWS / PIXIJS WEBGL</span>
       </footer>
 
       <Paytable open={paytableOpen} onClose={() => setPaytableOpen(false)} />

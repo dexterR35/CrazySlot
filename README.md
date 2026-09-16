@@ -1,6 +1,6 @@
-# Mega Mesa 2D Slots
+# Mega Mesa PixiJS Slots
 
-A polished, responsive Western slot-machine demo built with React and Vite. It uses a static front-facing 2D cabinet with five reels and three visible rows, 20 animated paylines, WILD substitution, TNT scatter bonuses, free spins, and a demo progressive MEGA jackpot.
+A polished, responsive Western slot-machine demo built with React, Vite, and PixiJS. The canvas renderer drives five independently animated physical reels, staggered eased stops, bounce physics, sequential payline playback, per-symbol win highlights, and particle celebrations. The game includes 20 fixed paylines, WILD substitution, TNT scatter bonuses, free spins, and a demo progressive MEGA jackpot.
 
 ## Run locally
 
